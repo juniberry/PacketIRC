@@ -34,7 +34,7 @@ from settings import LOG_FILE, LOG_LEVEL, SERVER, PORT, PASS, CHANNEL, HIDE_SERV
 
 
 # Globals
-VERSION = 'v1.0'
+VERSION = 'v1.1'
 BAD_WORDS = []
 HOME_PATH = os.path.dirname(os.path.abspath(__file__)) # Grab home path for use with logging et al.
 
