@@ -1,7 +1,5 @@
 # PacketIRC
 
-## Introduction
-
 PacketIRC is a bandwidth-conscious IRC (Internet Relay Chat) client, specifically designed for packet radio communication. It offers a client-side implementation with simplified IRC functionalities tailored for efficient use over low-bandwidth connections.
 
 ## Features
