@@ -1,0 +1,19 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyz
+*.pyzw
+*.orig
+*.log
+*.tmp
+*.bak
+
+# Virtual Environment
+venv/
+
+# PacketIRC Settings
+settings.py
