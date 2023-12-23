@@ -34,7 +34,7 @@ from settings import LOG_FILE, LOG_LEVEL, SERVER, PORT, PASS, CHANNEL, HIDE_SERV
 
 
 # Globals
-VERSION = 'v1.1'
+VERSION = 'v1.1b'
 BAD_WORDS = []
 HOME_PATH = os.path.dirname(os.path.abspath(__file__)) # Grab home path for use with logging et al.
 
@@ -607,7 +607,9 @@ def main(callsign):
                 print(f"** Connecting to {SERVER}:{PORT}", flush=True)
 
             ## TODO: maybe add in interwebs lookup for callsign Name??
-            client.connect(SERVER, PORT, callsign, password=PASS, username=callsign, ircname=callsign)
+            # Strip the SSID value from a callsign to it's base call since this causes ident issues
+            base_call = re.match(r'^[A-Z0-9]+', callsign).group()
+            client.connect(SERVER, PORT, callsign, password=PASS, username=base_call, ircname=base_call)
             break
         except irc.client.ServerConnectionError as e:
             # Handle connection errors by checking retry count and giving it another shot if under.
