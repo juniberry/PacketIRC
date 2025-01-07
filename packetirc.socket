@@ -1,0 +1,9 @@
+[Unit]
+Description=PacketIRC for LinBPQ
+
+[Socket]
+ListenStream=6001
+Accept=yes
+
+[Install]
+WantedBy=sockets.target

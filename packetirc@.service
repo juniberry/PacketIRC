@@ -1,0 +1,11 @@
+[Unit]
+Description=PacketIRC for LinBPQ
+
+[Service]
+ExecStart=/home/bpquser/packetirc.py
+StandardInput=socket
+StandardOutput=socket
+User=bpquser
+
+[Install]
+WantedBy=multi-user.target

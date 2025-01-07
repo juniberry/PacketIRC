@@ -69,6 +69,19 @@ service packetirc
 }
 ```
 
+### Example systemd Service Configuration
+You can run PacketIRC from systemd as a socket service:
+
+Edit the supplied *packetirc.socket* and *packetirc@.service* to match the _path, username and port_ of your configuration.
+Copy *packetirc.socket* and *packetirc@.service* to */etc/systemd/system/*.
+
+Then enable the service:
+```
+sudo systemctl daemon-reload
+sudo systemctl enable packetirc.socket
+sudo systemctl start packetirc.socket
+
+
 ## Manual Usage
 
 1. Run the script: `python3 packetirc.py`
